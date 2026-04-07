@@ -1,0 +1,76 @@
+/* css/animations.css */
+/* Screen transitions and UI animations */
+
+/* Fade in/out for screen transitions */
+#screen-container {
+    transition: opacity 0.3s ease;
+}
+
+#screen-container.fade-out {
+    opacity: 0;
+    pointer-events: none;
+}
+
+#screen-container.fade-in {
+    opacity: 1;
+    pointer-events: all;
+}
+
+/* Slide up on initial screen load */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.screen {
+    animation: slideUp 0.35s ease forwards;
+}
+
+/* Progress bar fill */
+.progress-bar {
+    width: 100%;
+    height: 6px;
+    background-color: var(--color-surface-alt);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    margin-bottom: var(--space-xs);
+}
+
+.progress-bar__fill {
+    height: 100%;
+    background-color: var(--color-primary);
+    border-radius: var(--radius-sm);
+    transition: width 0.5s ease;
+}
+
+.progress-bar__label {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+}
+
+/* Choice card hover pop */
+@keyframes cardPop {
+    0%   { transform: scale(1); }
+    50%  { transform: scale(1.03); }
+    100% { transform: scale(1); }
+}
+
+.choice-card:active {
+    animation: cardPop 0.15s ease;
+}
+
+/* Pulse glow on primary buttons */
+@keyframes glowPulse {
+    0%, 100% { box-shadow: 0 0 8px rgba(108, 142, 255, 0.3); }
+    50%       { box-shadow: 0 0 18px rgba(108, 142, 255, 0.6); }
+}
+
+.btn--pulse {
+    animation: glowPulse 2s ease-in-out infinite;
+}

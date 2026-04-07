@@ -1,0 +1,44 @@
+// screens/branch-peer-pressure/screen-peerpressure-03.js
+// Peer pressure wrap-up + branch choices
+
+Engine.register('peerpressure-03', () => {
+    const screen = Utils.createElement('div', 'screen screen--content');
+
+    const heading = Utils.makeHeading(2, 'You Get To Choose Who You Are');
+
+    const p1 = Utils.makeParagraph(
+        'The people around you will shape you — but they don\'t define you. ' +
+        'Surrounding yourself with people who respect your boundaries and support ' +
+        'your wellbeing is one of the most powerful things you can do for your mental health.'
+    );
+    const p2 = Utils.makeParagraph('Where would you like to go next?');
+
+    const grid = Utils.createElement('div', 'choice-grid');
+
+    const choices = [
+        {
+            label: '🏷️ Stigma',
+            desc: 'How judgment and shame around mental health makes everything harder.',
+            target: 'stigma-01'
+        },
+        {
+            label: '🧘 Coping Strategies',
+            desc: 'Tools to handle pressure and protect your mental health.',
+            target: 'coping-01'
+        },
+        {
+            label: '⌂ Back to Hub',
+            desc: 'Explore a different topic.',
+            target: 'hub'
+        }
+    ];
+
+    choices.forEach(({ label, desc, target }) => {
+        grid.appendChild(createChoiceCard(label, desc, target));
+    });
+
+    const nav = createNav(true, false);
+
+    Utils.appendChildren(screen, heading, p1, p2, grid, nav);
+    return screen;
+});
