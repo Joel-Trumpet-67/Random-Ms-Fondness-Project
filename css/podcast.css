@@ -117,7 +117,9 @@
     padding: 2px 8px;
 }
 
-/* ── Speaker blocks — Joel = blue, Michael = green ── */
+/* ── Speaker blocks — colors match shirt colors from sprites
+   Joel shirt:    #2E4A8F → brightened to #5b82d4
+   Michael shirt: #2D7A4F → brightened to #4aad70  ── */
 .speaker-block {
     border-left: 3px solid transparent;
     padding: var(--space-sm) var(--space-md);
@@ -126,13 +128,13 @@
 }
 
 .speaker-block--joel {
-    border-left-color: #6c8eff;
-    background-color: rgba(108, 142, 255, 0.06);
+    border-left-color: #5b82d4;
+    background-color: rgba(91, 130, 212, 0.07);
 }
 
 .speaker-block--michael {
-    border-left-color: #4ade80;
-    background-color: rgba(74, 222, 128, 0.06);
+    border-left-color: #4aad70;
+    background-color: rgba(74, 173, 112, 0.07);
 }
 
 .speaker-label {
@@ -144,8 +146,8 @@
     display: block;
 }
 
-.speaker-label--joel    { color: #6c8eff; }
-.speaker-label--michael { color: #4ade80; }
+.speaker-label--joel    { color: #5b82d4; }
+.speaker-label--michael { color: #4aad70; }
 
 /* ── Responsive ── */
 @media (max-width: 560px) {
