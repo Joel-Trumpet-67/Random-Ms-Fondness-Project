@@ -118,12 +118,14 @@ const Engine = {
                 ? text.split('')         // each character
                 : text.split(' ');       // each word
 
-            const speed = isHeading ? 30 : 60;
+            // Headings: ~80ms per char | paragraphs: ~380ms per word
+            // 380ms/word ≈ natural speaking pace (~160 words/min)
+            const speed = isHeading ? 80 : 380;
             const join  = isHeading ? '' : ' ';
 
             const startAt = cursor;
             const duration = chunks.length * speed;
-            cursor += duration * 0.6; // next element overlaps slightly
+            cursor += duration + 600; // pause between speakers
 
             setTimeout(() => {
                 let i = 0;
