@@ -22,12 +22,12 @@ Engine.register('coping-03', () => {
     const choices = [
         {
             label: '🌱 Self-Care',
-            desc: 'Turn coping strategies into lasting daily habits.',
+            desc: 'Learn how to build coping strategies into lasting daily routines.',
             target: 'selfcare-01'
         },
         {
             label: '🤝 Sources of Help',
-            desc: 'Sometimes you need more than coping — find out who can help.',
+            desc: 'Learn about support resources beyond individual coping strategies.',
             target: 'sources-01'
         },
         {

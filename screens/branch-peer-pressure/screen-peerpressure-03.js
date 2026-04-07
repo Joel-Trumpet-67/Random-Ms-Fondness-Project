@@ -18,12 +18,12 @@ Engine.register('peerpressure-03', () => {
     const choices = [
         {
             label: '🏷️ Stigma',
-            desc: 'How judgment and shame around mental health makes everything harder.',
+            desc: 'Learn how stigma and shame around mental health affects people.',
             target: 'stigma-01'
         },
         {
             label: '🧘 Coping Strategies',
-            desc: 'Tools to handle pressure and protect your mental health.',
+            desc: 'Explore tools for managing pressure and maintaining mental wellness.',
             target: 'coping-01'
         },
         {

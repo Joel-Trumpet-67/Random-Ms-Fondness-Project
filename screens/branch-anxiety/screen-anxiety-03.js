@@ -18,12 +18,12 @@ Engine.register('anxiety-03', () => {
     const choices = [
         {
             label: '🧘 Coping Strategies',
-            desc: 'Practical tools that help calm anxiety in the moment and over time.',
+            desc: 'Learn techniques that help reduce anxiety and build long-term resilience.',
             target: 'coping-01'
         },
         {
             label: '😔 Depression',
-            desc: 'Anxiety and depression often go hand in hand — learn the connection.',
+            desc: 'Learn how anxiety and depression are connected and how to understand both.',
             target: 'depression-01'
         },
         {

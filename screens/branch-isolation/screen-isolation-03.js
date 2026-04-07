@@ -18,7 +18,7 @@ Engine.register('isolation-03', () => {
     const choices = [
         {
             label: '🤝 Sources of Help',
-            desc: 'Find out who you can turn to when things feel too heavy.',
+            desc: 'Learn about available support resources and how to access them.',
             target: 'sources-01'
         },
         {

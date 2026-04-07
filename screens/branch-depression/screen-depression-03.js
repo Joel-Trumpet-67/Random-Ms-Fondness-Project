@@ -18,12 +18,12 @@ Engine.register('depression-03', () => {
     const choices = [
         {
             label: '😶 Isolation',
-            desc: 'Depression often leads to pulling away — learn why and what to do.',
+            desc: 'Learn how depression connects to withdrawal and social isolation.',
             target: 'isolation-01'
         },
         {
             label: '🌱 Self-Care',
-            desc: 'Small daily habits that make a real difference.',
+            desc: 'Learn daily habits and routines that support good mental health.',
             target: 'selfcare-01'
         },
         {

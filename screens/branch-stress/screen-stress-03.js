@@ -20,12 +20,12 @@ Engine.register('stress-03', () => {
     const choices = [
         {
             label: '😰 Anxiety',
-            desc: 'Stress that won\'t turn off — learn about anxiety and what it feels like.',
+            desc: 'Learn how stress connects to anxiety and how to recognize the difference.',
             target: 'anxiety-01'
         },
         {
             label: '🧘 Coping Strategies',
-            desc: 'Practical tools to manage stress and feel better.',
+            desc: 'Explore practical techniques for managing stress and maintaining wellness.',
             target: 'coping-01'
         },
         {
