@@ -4,10 +4,9 @@
 Engine.register('hub', () => {
     const screen = Utils.createElement('div', 'screen screen--hub');
 
-    const heading = Utils.makeHeading(2, 'What are you going through?');
+    const heading = Utils.makeHeading(2, 'What would you like to learn about?');
     const subtitle = Utils.createElement('p', 'hub-subtitle',
-        'Pick the option that feels most like what\'s on your mind. ' +
-        'You can always come back and explore the others.'
+        'Pick a topic to explore. You can always come back and check out the others.'
     );
 
     const grid = Utils.createElement('div', 'choice-grid');
@@ -15,27 +14,27 @@ Engine.register('hub', () => {
     const choices = [
         {
             label: '😰 Stress & Anxiety',
-            desc: 'Feeling overwhelmed, worried, or like everything is too much.',
+            desc: 'Learn what stress and anxiety are and how they affect you.',
             target: 'stress-01'
         },
         {
             label: '😔 Depression & Isolation',
-            desc: 'Feeling down, empty, or like pulling away from everyone.',
+            desc: 'Understand depression, withdrawal, and how to recognize them.',
             target: 'depression-01'
         },
         {
             label: '💭 Self-Esteem & Identity',
-            desc: 'Struggling with how you see yourself or who you are.',
+            desc: 'Explore how we see ourselves and build confidence.',
             target: 'selfesteem-01'
         },
         {
             label: '👥 Peer Pressure & Boundaries',
-            desc: 'Feeling pressured by others or unsure how to say no.',
+            desc: 'Learn about pressure from others and how to set healthy limits.',
             target: 'peerpressure-01'
         },
         {
-            label: '🤝 I Need Help',
-            desc: 'Not sure where to turn — let\'s find the right support together.',
+            label: '🤝 Sources of Help',
+            desc: 'Find out where and how to get support when it\'s needed.',
             target: 'sources-01'
         }
     ];
