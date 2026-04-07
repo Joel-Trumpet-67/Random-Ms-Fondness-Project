@@ -104,25 +104,8 @@
     animation: cursorBlink 0.75s step-end infinite;
 }
 
-/* Paragraph fade-in stagger for content screens */
-.screen--content p,
-.screen--content ul,
-.screen--content h3,
-.screen--content .tip-box,
-.screen--content .warning-box {
+/* Text elements start hidden — JS typewriter reveals them */
+.screen h1, .screen h2, .screen h3, .screen h4,
+.screen p, .screen li, .screen span.concept-tag {
     opacity: 0;
-    animation: fadeInUp 0.4s ease forwards;
-}
-
-.screen--content p:nth-child(2)  { animation-delay: 0.3s; }
-.screen--content p:nth-child(3)  { animation-delay: 0.5s; }
-.screen--content p:nth-child(4)  { animation-delay: 0.7s; }
-.screen--content ul              { animation-delay: 0.6s; }
-.screen--content h3              { animation-delay: 0.4s; }
-.screen--content .tip-box        { animation-delay: 0.9s; }
-.screen--content .warning-box    { animation-delay: 0.9s; }
-
-@keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(8px); }
-    to   { opacity: 1; transform: translateY(0); }
 }

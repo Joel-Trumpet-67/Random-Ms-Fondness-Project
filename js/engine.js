@@ -92,15 +92,58 @@ const Engine = {
         }, 300);
     },
 
-    // Apply typewriter effect to h2 headings on each new screen
+    // Apply typewriter effect to all text elements on each screen
     applyTypewriter(container) {
-        const heading = container.querySelector('h2');
-        if (!heading) return;
-        heading.classList.add('typewriter-text');
-        heading.addEventListener('animationend', (e) => {
-            if (e.animationName === 'typewriter') {
-                heading.classList.add('done');
-            }
+        // Grab all text elements except buttons and labels
+        const elements = Array.from(container.querySelectorAll(
+            'h1, h2, h3, h4, p, li, span.concept-tag'
+        )).filter(el => {
+            // Skip elements inside buttons or nav
+            return !el.closest('button') && !el.closest('.nav') && !el.closest('.sprite-wrap');
+        });
+
+        let cursor = 0; // tracks when the next element should start
+
+        elements.forEach(el => {
+            const text = el.textContent.trim();
+            if (!text) return;
+
+            el.textContent = '';
+            el.style.opacity = '1';
+
+            const isHeading = /^H[1-4]$/.test(el.tagName);
+
+            // Headings: char by char | everything else: word by word
+            const chunks = isHeading
+                ? text.split('')         // each character
+                : text.split(' ');       // each word
+
+            const speed = isHeading ? 30 : 60;
+            const join  = isHeading ? '' : ' ';
+
+            const startAt = cursor;
+            const duration = chunks.length * speed;
+            cursor += duration * 0.6; // next element overlaps slightly
+
+            setTimeout(() => {
+                let i = 0;
+                // Add blinking cursor to headings while typing
+                if (isHeading) {
+                    el.classList.add('typewriter-text');
+                }
+                const interval = setInterval(() => {
+                    if (i === 0) {
+                        el.textContent = chunks[0];
+                    } else {
+                        el.textContent += join + chunks[i];
+                    }
+                    i++;
+                    if (i >= chunks.length) {
+                        clearInterval(interval);
+                        if (isHeading) el.classList.add('done');
+                    }
+                }, speed);
+            }, startAt);
         });
     },
 
