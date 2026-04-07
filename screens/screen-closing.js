@@ -34,6 +34,7 @@ Engine.register('closing', () => {
     const btnRow = Utils.createElement('div', 'nav');
     Utils.appendChildren(btnRow, hubBtn, restartBtn);
 
-    Utils.appendChildren(screen, heading, p1, p2, p3, sign, divider, btnRow);
+    const spritePair = Sprites.both('happy', 'happy');
+    Utils.appendChildren(screen, spritePair, heading, p1, p2, p3, sign, divider, btnRow);
     return screen;
 });

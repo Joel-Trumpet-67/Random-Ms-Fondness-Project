@@ -41,6 +41,7 @@ Engine.register('depression-01', () => {
     const nextBtn = createButton('Next →', 'depression-02', 'btn');
     const nav = createNav(true, true);
 
-    Utils.appendChildren(screen, tag, heading, p1, p2, list, tipBox, nextBtn, nav);
+    const conceptSprite = Sprites.concept('depression');
+    Utils.appendChildren(screen, tag, conceptSprite, heading, p1, p2, list, tipBox, nextBtn, nav);
     return screen;
 });

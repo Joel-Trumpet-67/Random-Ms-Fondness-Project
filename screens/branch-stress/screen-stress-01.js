@@ -29,6 +29,7 @@ Engine.register('stress-01', () => {
     const nextBtn = createButton('Next →', 'stress-02', 'btn');
     const nav = createNav(true, true);
 
-    Utils.appendChildren(screen, tag, heading, p1, p2, tipBox, nextBtn, nav);
+    const conceptSprite = Sprites.concept('stress');
+    Utils.appendChildren(screen, tag, conceptSprite, heading, p1, p2, tipBox, nextBtn, nav);
     return screen;
 });

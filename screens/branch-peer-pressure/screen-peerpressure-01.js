@@ -35,6 +35,7 @@ Engine.register('peerpressure-01', () => {
     const nextBtn = createButton('Next →', 'peerpressure-02', 'btn');
     const nav = createNav(true, true);
 
-    Utils.appendChildren(screen, tag, heading, p1, p2, list, nextBtn, nav);
+    const conceptSprite = Sprites.concept('anxiety');
+    Utils.appendChildren(screen, tag, conceptSprite, heading, p1, p2, list, nextBtn, nav);
     return screen;
 });

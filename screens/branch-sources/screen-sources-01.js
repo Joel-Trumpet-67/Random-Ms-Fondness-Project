@@ -32,6 +32,7 @@ Engine.register('sources-01', () => {
     const nextBtn = createButton('Next →', 'sources-02', 'btn');
     const nav = createNav(true, true);
 
-    Utils.appendChildren(screen, tag, heading, p1, h3a, pa, h3b, pb, nextBtn, nav);
+    const conceptSprite = Sprites.concept('help');
+    Utils.appendChildren(screen, tag, conceptSprite, heading, p1, h3a, pa, h3b, pb, nextBtn, nav);
     return screen;
 });

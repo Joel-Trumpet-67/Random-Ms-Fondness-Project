@@ -31,6 +31,7 @@ Engine.register('selfesteem-01', () => {
     const nextBtn = createButton('Next →', 'selfesteem-02', 'btn');
     const nav = createNav(true, true);
 
-    Utils.appendChildren(screen, tag, heading, p1, p2, tipBox, nextBtn, nav);
+    const conceptSprite = Sprites.concept('happy');
+    Utils.appendChildren(screen, tag, conceptSprite, heading, p1, p2, tipBox, nextBtn, nav);
     return screen;
 });

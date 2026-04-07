@@ -43,6 +43,7 @@ Engine.register('hub', () => {
         grid.appendChild(createChoiceCard(label, desc, target));
     });
 
-    Utils.appendChildren(screen, heading, subtitle, grid);
+    const spritePair = Sprites.both('neutral', 'happy');
+    Utils.appendChildren(screen, spritePair, heading, subtitle, grid);
     return screen;
 });
