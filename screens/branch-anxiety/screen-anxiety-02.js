@@ -1,44 +1,36 @@
-// screens/branch-anxiety/screen-anxiety-03.js
-// Anxiety wrap-up + branch choices
+// screens/branch-anxiety/screen-anxiety-02.js
+// Anxiety vs normal worry + avoidance
 
-Engine.register('anxiety-03', () => {
+Engine.register('anxiety-02', () => {
     const screen = Utils.createElement('div', 'screen screen--content');
 
-    const heading = Utils.makeHeading(2, 'Anxiety Is Manageable');
+    const tag1 = Utils.createElement('span', 'concept-tag', 'Anxiety');
+    const tag2 = Utils.createElement('span', 'concept-tag', 'Avoidance');
+    const heading = Utils.makeHeading(2, 'When Worry Becomes a Problem');
 
     const p1 = Utils.makeParagraph(
-        'Anxiety can feel overwhelming, but it is manageable — especially when ' +
-        'you have the right tools and support. You don\'t have to white-knuckle ' +
-        'your way through it alone.'
+        'Normal worry comes and goes. Anxiety sticks around, grows, and can ' +
+        'start controlling your decisions. One of the most common responses to ' +
+        'anxiety is avoidance — staying away from people, places, or situations ' +
+        'that make you feel anxious.'
     );
-    const p2 = Utils.makeParagraph('Where would you like to go next?');
+    const p2 = Utils.makeParagraph(
+        'The problem with avoidance is that it provides short-term relief ' +
+        'but makes anxiety worse in the long run. Every time you avoid something, ' +
+        'your brain learns that it\'s dangerous — and the fear grows.'
+    );
 
-    const grid = Utils.createElement('div', 'choice-grid');
+    const warningBox = Utils.createElement('div', 'warning-box');
+    const warningText = Utils.makeParagraph(
+        '⚠️ Avoiding things that make you anxious feels like relief — ' +
+        'but it\'s actually feeding the anxiety. Facing fears gradually, ' +
+        'with support, is how anxiety gets better.'
+    );
+    warningBox.appendChild(warningText);
 
-    const choices = [
-        {
-            label: '🧘 Coping Strategies',
-            desc: 'Practical tools that help calm anxiety in the moment and over time.',
-            target: 'coping-01'
-        },
-        {
-            label: '😔 Depression',
-            desc: 'Anxiety and depression often go hand in hand — learn the connection.',
-            target: 'depression-01'
-        },
-        {
-            label: '⌂ Back to Hub',
-            desc: 'Explore a different topic.',
-            target: 'hub'
-        }
-    ];
+    const nextBtn = createButton('Next →', 'anxiety-03', 'btn');
+    const nav = createNav(true, true);
 
-    choices.forEach(({ label, desc, target }) => {
-        grid.appendChild(createChoiceCard(label, desc, target));
-    });
-
-    const nav = createNav(true, false);
-
-    Utils.appendChildren(screen, heading, p1, p2, grid, nav);
+    Utils.appendChildren(screen, tag1, tag2, heading, p1, p2, warningBox, nextBtn, nav);
     return screen;
 });
