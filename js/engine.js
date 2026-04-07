@@ -85,10 +85,23 @@ const Engine = {
             // Update progress bar and episode label
             ProgressBar.update();
             Engine.updateEpisodeLabel(screenId);
+            Engine.applyTypewriter(container);
 
             // Scroll to top
             window.scrollTo(0, 0);
         }, 300);
+    },
+
+    // Apply typewriter effect to h2 headings on each new screen
+    applyTypewriter(container) {
+        const heading = container.querySelector('h2');
+        if (!heading) return;
+        heading.classList.add('typewriter-text');
+        heading.addEventListener('animationend', (e) => {
+            if (e.animationName === 'typewriter') {
+                heading.classList.add('done');
+            }
+        });
     },
 
     // Check if a screen exists in the registry
