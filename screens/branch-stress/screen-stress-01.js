@@ -7,14 +7,14 @@ Engine.register('stress-01', () => {
     const tag = Utils.createElement('span', 'concept-tag', 'Stress');
     const heading = Utils.makeHeading(2, 'What Is Stress?');
 
-    const p1 = Utils.makeParagraph(
+    const joel1 = Utils.speakerBlock('joel',
         'Stress is your body\'s natural response to demands or pressure. ' +
         'It\'s not always a bad thing — in small doses, stress can actually ' +
         'motivate you and help you perform. But when it builds up without relief, ' +
         'it starts to take a real toll on your mental and physical health.'
     );
-    const p2 = Utils.makeParagraph(
-        'You might feel stress as tension in your body, racing thoughts, ' +
+    const michael1 = Utils.speakerBlock('michael',
+        'You might notice stress as tension in your body, racing thoughts, ' +
         'trouble sleeping, irritability, or just feeling constantly on edge. ' +
         'These are signs your mind and body are asking for help.'
     );
@@ -30,6 +30,6 @@ Engine.register('stress-01', () => {
     const nav = createNav(true, true);
 
     const conceptSprite = Sprites.concept('stress');
-    Utils.appendChildren(screen, tag, conceptSprite, heading, p1, p2, tipBox, nextBtn, nav);
+    Utils.appendChildren(screen, tag, conceptSprite, heading, joel1, michael1, tipBox, nextBtn, nav);
     return screen;
 });

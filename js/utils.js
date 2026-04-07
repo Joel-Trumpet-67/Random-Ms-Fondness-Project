@@ -41,6 +41,22 @@ const Utils = {
     // Returns the progress container
     getProgressContainer() {
         return document.getElementById('progress-container');
+    },
+
+    // Creates a speaker block — who = 'joel' | 'michael'
+    // text can be a string or an array of strings (multiple paragraphs)
+    speakerBlock(who, text) {
+        const block = Utils.createElement('div', `speaker-block speaker-block--${who}`);
+        const label = Utils.createElement('span', `speaker-label speaker-label--${who}`, who === 'joel' ? 'Joel' : 'Michael');
+        block.appendChild(label);
+
+        const lines = Array.isArray(text) ? text : [text];
+        lines.forEach(line => {
+            const p = Utils.makeParagraph(line);
+            block.appendChild(p);
+        });
+
+        return block;
     }
 
 };
