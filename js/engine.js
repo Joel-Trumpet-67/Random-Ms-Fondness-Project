@@ -108,6 +108,13 @@ const Engine = {
             const text = el.textContent.trim();
             if (!text) return;
 
+            // Hide the whole speaker block until its turn — so empty boxes don't show up front
+            const speakerBlock = el.closest('.speaker-block');
+            if (speakerBlock) {
+                speakerBlock.style.opacity = '0';
+                speakerBlock.style.transition = 'opacity 0.25s ease';
+            }
+
             el.textContent = '';
             el.style.opacity = '1';
 
@@ -127,6 +134,10 @@ const Engine = {
             cursor += duration + 400; // pause between speakers
 
             setTimeout(() => {
+                // Reveal the speaker block right as typing starts
+                if (speakerBlock) {
+                    speakerBlock.style.opacity = '1';
+                }
                 let i = 0;
                 // Add blinking cursor to headings while typing
                 if (isHeading) {
