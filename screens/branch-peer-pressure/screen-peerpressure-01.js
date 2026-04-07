@@ -7,14 +7,14 @@ Engine.register('peerpressure-01', () => {
     const tag = Utils.createElement('span', 'concept-tag', 'Peer Pressure');
     const heading = Utils.makeHeading(2, 'When Others Push You To Be Someone You\'re Not');
 
-    const p1 = Utils.makeParagraph(
+    const joel1 = Utils.speakerBlock('joel',
         'Peer pressure is the influence people around you have on your choices — ' +
         'sometimes direct ("just do it"), sometimes subtle (feeling like you have to ' +
         'act a certain way to fit in). It doesn\'t just come from friends. ' +
         'It can come from social media, sports teams, family, or anyone whose ' +
         'opinion matters to you.'
     );
-    const p2 = Utils.makeParagraph(
+    const michael1 = Utils.speakerBlock('michael',
         'Not all peer influence is bad — friends can push you toward good things too. ' +
         'But negative peer pressure can lead you to make choices that go against ' +
         'your values, damage your mental health, or put you in unsafe situations.'
@@ -36,6 +36,6 @@ Engine.register('peerpressure-01', () => {
     const nav = createNav(true, true);
 
     const conceptSprite = Sprites.concept('anxiety');
-    Utils.appendChildren(screen, tag, conceptSprite, heading, p1, p2, list, nextBtn, nav);
+    Utils.appendChildren(screen, tag, conceptSprite, heading, joel1, michael1, list, nextBtn, nav);
     return screen;
 });

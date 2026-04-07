@@ -6,16 +6,17 @@ Engine.register('closing', () => {
 
     const heading = Utils.makeHeading(2, 'You Matter. Full Stop.');
 
-    const p1 = Utils.makeParagraph(
+    const joel1 = Utils.speakerBlock('joel',
         'We made this because we care — about you, about the people in our lives, ' +
         'and about breaking the silence around mental health.'
     );
-    const p2 = Utils.makeParagraph(
+    const michael1 = Utils.speakerBlock('michael',
         'Whatever you\'re going through right now — stress, anxiety, depression, ' +
         'low self-esteem, pressure from others — you don\'t have to white-knuckle ' +
         'your way through it alone. There are people who want to help. ' +
         'There are tools that work. And there is a way through.'
     );
+
     const p3 = Utils.createElement('p', 'final-message',
         'Take care of yourself. Reach out when you need to. ' +
         'And remember — asking for help isn\'t giving up. ' +
@@ -35,6 +36,6 @@ Engine.register('closing', () => {
     Utils.appendChildren(btnRow, hubBtn, restartBtn);
 
     const spritePair = Sprites.both('happy', 'happy');
-    Utils.appendChildren(screen, spritePair, heading, p1, p2, p3, sign, divider, btnRow);
+    Utils.appendChildren(screen, spritePair, heading, joel1, michael1, p3, sign, divider, btnRow);
     return screen;
 });

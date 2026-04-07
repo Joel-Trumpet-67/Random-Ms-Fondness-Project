@@ -7,13 +7,13 @@ Engine.register('anxiety-01', () => {
     const tag = Utils.createElement('span', 'concept-tag', 'Anxiety');
     const heading = Utils.makeHeading(2, 'What Is Anxiety?');
 
-    const p1 = Utils.makeParagraph(
+    const joel1 = Utils.speakerBlock('joel',
         'Anxiety is more than just feeling nervous. It\'s a persistent feeling of ' +
         'worry, fear, or dread that doesn\'t go away — even when there\'s no ' +
         'immediate threat. Your brain stays stuck in "danger mode," making it hard ' +
         'to relax, focus, or enjoy everyday life.'
     );
-    const p2 = Utils.makeParagraph(
+    const michael1 = Utils.speakerBlock('michael',
         'Anxiety can show up in your body too — racing heart, sweaty palms, ' +
         'tight chest, upset stomach, or feeling like something bad is about to happen ' +
         'even when everything is fine.'
@@ -30,6 +30,6 @@ Engine.register('anxiety-01', () => {
     const nextBtn = createButton('Next →', 'anxiety-02', 'btn');
     const nav = createNav(true, true);
 
-    Utils.appendChildren(screen, tag, heading, p1, p2, tipBox, nextBtn, nav);
+    Utils.appendChildren(screen, tag, heading, joel1, michael1, tipBox, nextBtn, nav);
     return screen;
 });

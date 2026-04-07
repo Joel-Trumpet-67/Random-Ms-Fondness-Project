@@ -8,13 +8,13 @@ Engine.register('professional-01', () => {
     const tag2 = Utils.createElement('span', 'concept-tag', 'Mental Health Disorders');
     const heading = Utils.makeHeading(2, 'What Getting Professional Help Actually Looks Like');
 
-    const p1 = Utils.makeParagraph(
+    const joel1 = Utils.speakerBlock('joel',
         'A lot of people avoid therapy because they don\'t know what to expect. ' +
         'Here\'s the reality: a therapist or counselor is someone trained to listen ' +
         'without judgment, help you understand your thoughts and feelings, ' +
         'and give you tools to cope. It\'s just a conversation — a safe one.'
     );
-    const p2 = Utils.makeParagraph(
+    const michael1 = Utils.speakerBlock('michael',
         'Mental health disorders like anxiety disorders, depression, PTSD, and others ' +
         'are real medical conditions — not personality flaws or signs of weakness. ' +
         'They\'re also highly treatable. Most people who seek professional help ' +
@@ -32,6 +32,6 @@ Engine.register('professional-01', () => {
     const nextBtn = createButton('Next →', 'professional-02', 'btn');
     const nav = createNav(true, true);
 
-    Utils.appendChildren(screen, tag1, tag2, heading, p1, p2, tipBox, nextBtn, nav);
+    Utils.appendChildren(screen, tag1, tag2, heading, joel1, michael1, tipBox, nextBtn, nav);
     return screen;
 });

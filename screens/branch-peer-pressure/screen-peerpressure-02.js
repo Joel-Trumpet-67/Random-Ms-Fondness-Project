@@ -8,13 +8,13 @@ Engine.register('peerpressure-02', () => {
     const tag2 = Utils.createElement('span', 'concept-tag', 'Communication');
     const heading = Utils.makeHeading(2, 'Setting Boundaries and Saying No');
 
-    const p1 = Utils.makeParagraph(
+    const joel1 = Utils.speakerBlock('joel',
         'Boundaries are the limits you set to protect your mental, emotional, ' +
         'and physical wellbeing. They\'re not walls — they\'re guidelines that ' +
         'tell people how you need to be treated. Setting a boundary is an act ' +
         'of self-respect, not selfishness.'
     );
-    const p2 = Utils.makeParagraph(
+    const michael1 = Utils.speakerBlock('michael',
         'Good communication is key. You don\'t need a long explanation to say no. ' +
         'A clear, calm "no thanks" or "that\'s not something I\'m comfortable with" ' +
         'is enough. People who respect you will respect your boundaries.'
@@ -31,6 +31,6 @@ Engine.register('peerpressure-02', () => {
     const nextBtn = createButton('Next →', 'peerpressure-03', 'btn');
     const nav = createNav(true, true);
 
-    Utils.appendChildren(screen, tag1, tag2, heading, p1, p2, tipBox, nextBtn, nav);
+    Utils.appendChildren(screen, tag1, tag2, heading, joel1, michael1, tipBox, nextBtn, nav);
     return screen;
 });

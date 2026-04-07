@@ -6,12 +6,12 @@ Engine.register('depression-03', () => {
 
     const heading = Utils.makeHeading(2, 'Depression Can Get Better');
 
-    const p1 = Utils.makeParagraph(
+    const joel1 = Utils.speakerBlock('joel',
         'Depression can feel permanent — like it\'s just who you are now. ' +
         'But that\'s the depression talking. With the right support, ' +
         'people recover from depression every single day.'
     );
-    const p2 = Utils.makeParagraph('Where would you like to go next?');
+    const michael1 = Utils.speakerBlock('michael', 'Where would you like to go next?');
 
     const grid = Utils.createElement('div', 'choice-grid');
 
@@ -39,6 +39,6 @@ Engine.register('depression-03', () => {
 
     const nav = createNav(true, false);
 
-    Utils.appendChildren(screen, heading, p1, p2, grid, nav);
+    Utils.appendChildren(screen, heading, joel1, michael1, grid, nav);
     return screen;
 });

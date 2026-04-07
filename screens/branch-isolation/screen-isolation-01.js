@@ -8,12 +8,12 @@ Engine.register('isolation-01', () => {
     const tag2 = Utils.createElement('span', 'concept-tag', 'Withdrawal');
     const heading = Utils.makeHeading(2, 'Pulling Away From Everyone');
 
-    const p1 = Utils.makeParagraph(
+    const joel1 = Utils.speakerBlock('joel',
         'When we\'re hurting, our instinct is often to pull away — to cancel plans, ' +
         'stop texting back, and spend more time alone. This is called withdrawal, ' +
         'and while it feels like self-protection, it usually makes things worse.'
     );
-    const p2 = Utils.makeParagraph(
+    const michael1 = Utils.speakerBlock('michael',
         'Isolation removes you from the people and experiences that help you heal. ' +
         'The longer you stay isolated, the harder it becomes to reach back out — ' +
         'and the more alone you feel.'
@@ -30,6 +30,6 @@ Engine.register('isolation-01', () => {
     const nextBtn = createButton('Next →', 'isolation-02', 'btn');
     const nav = createNav(true, true);
 
-    Utils.appendChildren(screen, tag1, tag2, heading, p1, p2, warningBox, nextBtn, nav);
+    Utils.appendChildren(screen, tag1, tag2, heading, joel1, michael1, warningBox, nextBtn, nav);
     return screen;
 });

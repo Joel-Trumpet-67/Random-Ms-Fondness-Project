@@ -7,7 +7,7 @@ Engine.register('professional-02', () => {
     const tag = Utils.createElement('span', 'concept-tag', 'Seeking Professional Advice');
     const heading = Utils.makeHeading(2, 'How To Take The First Step');
 
-    const p1 = Utils.makeParagraph(
+    const joel1 = Utils.speakerBlock('joel',
         'Asking for professional help can feel intimidating — especially if you\'ve ' +
         'never done it before or if stigma has made you feel like you shouldn\'t need it. ' +
         'Here\'s how to start:'
@@ -25,7 +25,7 @@ Engine.register('professional-02', () => {
         list.appendChild(li);
     });
 
-    const p2 = Utils.makeParagraph('Where would you like to go next?');
+    const michael1 = Utils.speakerBlock('michael', 'Where would you like to go next?');
 
     const grid = Utils.createElement('div', 'choice-grid');
 
@@ -48,6 +48,6 @@ Engine.register('professional-02', () => {
 
     const nav = createNav(true, false);
 
-    Utils.appendChildren(screen, tag, heading, p1, list, p2, grid, nav);
+    Utils.appendChildren(screen, tag, heading, joel1, list, michael1, grid, nav);
     return screen;
 });

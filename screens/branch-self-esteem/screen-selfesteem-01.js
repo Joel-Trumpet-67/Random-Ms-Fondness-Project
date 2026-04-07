@@ -7,13 +7,13 @@ Engine.register('selfesteem-01', () => {
     const tag = Utils.createElement('span', 'concept-tag', 'Self-Esteem');
     const heading = Utils.makeHeading(2, 'How You See Yourself');
 
-    const p1 = Utils.makeParagraph(
+    const joel1 = Utils.speakerBlock('joel',
         'Self-esteem is how you value and see yourself — your overall sense ' +
         'of your own worth. It affects every part of your life: how you handle ' +
         'challenges, how you relate to others, and how you talk to yourself ' +
         'when things go wrong.'
     );
-    const p2 = Utils.makeParagraph(
+    const michael1 = Utils.speakerBlock('michael',
         'Low self-esteem often sounds like an inner voice that says ' +
         '"I\'m not good enough," "I don\'t deserve good things," or ' +
         '"Everyone else has it together except me." That voice isn\'t the truth — ' +
@@ -32,6 +32,6 @@ Engine.register('selfesteem-01', () => {
     const nav = createNav(true, true);
 
     const conceptSprite = Sprites.concept('happy');
-    Utils.appendChildren(screen, tag, conceptSprite, heading, p1, p2, tipBox, nextBtn, nav);
+    Utils.appendChildren(screen, tag, conceptSprite, heading, joel1, michael1, tipBox, nextBtn, nav);
     return screen;
 });

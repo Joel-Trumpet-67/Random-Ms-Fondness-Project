@@ -6,16 +6,16 @@ Engine.register('stigma-02', () => {
 
     const heading = Utils.makeHeading(2, 'Asking For Help Is Brave');
 
-    const p1 = Utils.makeParagraph(
+    const joel1 = Utils.speakerBlock('joel',
         'Seeking help for your mental health is not weakness. ' +
         'It takes more courage to say "I\'m struggling and I need support" ' +
         'than to suffer alone and pretend everything is fine.'
     );
-    const p2 = Utils.makeParagraph(
+    const michael1 = Utils.speakerBlock('michael',
         'You wouldn\'t tell someone with a broken leg to just walk it off. ' +
         'Mental health is no different. It deserves the same care and attention.'
     );
-    const p3 = Utils.makeParagraph('Where would you like to go next?');
+    const joel2 = Utils.speakerBlock('joel', 'Where would you like to go next?');
 
     const grid = Utils.createElement('div', 'choice-grid');
 
@@ -38,6 +38,6 @@ Engine.register('stigma-02', () => {
 
     const nav = createNav(true, false);
 
-    Utils.appendChildren(screen, heading, p1, p2, p3, grid, nav);
+    Utils.appendChildren(screen, heading, joel1, michael1, joel2, grid, nav);
     return screen;
 });

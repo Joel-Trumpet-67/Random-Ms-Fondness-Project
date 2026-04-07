@@ -8,13 +8,13 @@ Engine.register('anxiety-02', () => {
     const tag2 = Utils.createElement('span', 'concept-tag', 'Avoidance');
     const heading = Utils.makeHeading(2, 'When Worry Becomes a Problem');
 
-    const p1 = Utils.makeParagraph(
+    const joel1 = Utils.speakerBlock('joel',
         'Normal worry comes and goes. Anxiety sticks around, grows, and can ' +
         'start controlling your decisions. One of the most common responses to ' +
         'anxiety is avoidance — staying away from people, places, or situations ' +
         'that make you feel anxious.'
     );
-    const p2 = Utils.makeParagraph(
+    const michael1 = Utils.speakerBlock('michael',
         'The problem with avoidance is that it provides short-term relief ' +
         'but makes anxiety worse in the long run. Every time you avoid something, ' +
         'your brain learns that it\'s dangerous — and the fear grows.'
@@ -31,6 +31,6 @@ Engine.register('anxiety-02', () => {
     const nextBtn = createButton('Next →', 'anxiety-03', 'btn');
     const nav = createNav(true, true);
 
-    Utils.appendChildren(screen, tag1, tag2, heading, p1, p2, warningBox, nextBtn, nav);
+    Utils.appendChildren(screen, tag1, tag2, heading, joel1, michael1, warningBox, nextBtn, nav);
     return screen;
 });

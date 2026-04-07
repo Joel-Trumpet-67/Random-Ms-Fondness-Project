@@ -7,13 +7,13 @@ Engine.register('selfesteem-02', () => {
     const tag = Utils.createElement('span', 'concept-tag', 'Self-Confidence');
     const heading = Utils.makeHeading(2, 'Building Confidence');
 
-    const p1 = Utils.makeParagraph(
+    const joel1 = Utils.speakerBlock('joel',
         'Self-confidence is believing in your ability to handle situations and ' +
         'take on challenges. Unlike self-esteem — which is about your overall worth — ' +
         'confidence is more specific. You can feel confident in some areas and not others, ' +
         'and that\'s completely normal.'
     );
-    const p2 = Utils.makeParagraph(
+    const michael1 = Utils.speakerBlock('michael',
         'Confidence is built through action — not the other way around. ' +
         'You don\'t wait until you feel confident to try things. ' +
         'You try things, get through them, and confidence follows.'
@@ -35,6 +35,6 @@ Engine.register('selfesteem-02', () => {
     const nextBtn = createButton('Next →', 'selfesteem-03', 'btn');
     const nav = createNav(true, true);
 
-    Utils.appendChildren(screen, tag, heading, p1, p2, list, nextBtn, nav);
+    Utils.appendChildren(screen, tag, heading, joel1, michael1, list, nextBtn, nav);
     return screen;
 });

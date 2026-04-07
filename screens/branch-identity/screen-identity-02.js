@@ -6,17 +6,17 @@ Engine.register('identity-02', () => {
 
     const heading = Utils.makeHeading(2, 'Your Story Isn\'t Over');
 
-    const p1 = Utils.makeParagraph(
+    const joel1 = Utils.speakerBlock('joel',
         'One of the hardest parts of struggling mentally is that it can feel like ' +
         'it defines you. Like you\'re "the anxious one" or "the depressed one." ' +
         'But your mental health struggles are something you\'re going through — ' +
         'not who you are.'
     );
-    const p2 = Utils.makeParagraph(
+    const michael1 = Utils.speakerBlock('michael',
         'Resiliency — the ability to bounce back from hard times — is something ' +
         'everyone can build. Every challenge you\'ve survived has already made you stronger.'
     );
-    const p3 = Utils.makeParagraph('Where would you like to go next?');
+    const joel2 = Utils.speakerBlock('joel', 'Where would you like to go next?');
 
     const grid = Utils.createElement('div', 'choice-grid');
 
@@ -39,6 +39,6 @@ Engine.register('identity-02', () => {
 
     const nav = createNav(true, false);
 
-    Utils.appendChildren(screen, heading, p1, p2, p3, grid, nav);
+    Utils.appendChildren(screen, heading, joel1, michael1, joel2, grid, nav);
     return screen;
 });

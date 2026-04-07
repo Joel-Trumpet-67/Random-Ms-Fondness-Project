@@ -7,7 +7,7 @@ Engine.register('selfcare-01', () => {
     const tag = Utils.createElement('span', 'concept-tag', 'Self-Care');
     const heading = Utils.makeHeading(2, 'Taking Care of Yourself Isn\'t Selfish');
 
-    const p1 = Utils.makeParagraph(
+    const joel1 = Utils.speakerBlock('joel',
         'Self-care is any intentional action you take to protect and improve ' +
         'your mental, emotional, and physical health. It\'s not bubble baths and ' +
         'candles — it\'s the basics that keep you functioning: sleep, movement, ' +
@@ -39,6 +39,6 @@ Engine.register('selfcare-01', () => {
     const nextBtn = createButton('Next →', 'selfcare-02', 'btn');
     const nav = createNav(true, true);
 
-    Utils.appendChildren(screen, tag, heading, p1, list, tipBox, nextBtn, nav);
+    Utils.appendChildren(screen, tag, heading, joel1, list, tipBox, nextBtn, nav);
     return screen;
 });

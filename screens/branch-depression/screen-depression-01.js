@@ -7,13 +7,13 @@ Engine.register('depression-01', () => {
     const tag = Utils.createElement('span', 'concept-tag', 'Depression');
     const heading = Utils.makeHeading(2, 'What Is Depression?');
 
-    const p1 = Utils.makeParagraph(
+    const joel1 = Utils.speakerBlock('joel',
         'Depression is more than just feeling sad. It\'s a persistent low mood ' +
         'that affects how you think, feel, and function day to day. It can make ' +
         'even simple tasks feel impossible and drain the joy out of things you ' +
         'used to love.'
     );
-    const p2 = Utils.makeParagraph(
+    const michael1 = Utils.speakerBlock('michael',
         'Common signs of depression include:'
     );
 
@@ -42,6 +42,6 @@ Engine.register('depression-01', () => {
     const nav = createNav(true, true);
 
     const conceptSprite = Sprites.concept('depression');
-    Utils.appendChildren(screen, tag, conceptSprite, heading, p1, p2, list, tipBox, nextBtn, nav);
+    Utils.appendChildren(screen, tag, conceptSprite, heading, joel1, michael1, list, tipBox, nextBtn, nav);
     return screen;
 });

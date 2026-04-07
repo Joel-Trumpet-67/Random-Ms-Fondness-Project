@@ -7,7 +7,7 @@ Engine.register('stress-02', () => {
     const tag = Utils.createElement('span', 'concept-tag', 'Stressors');
     const heading = Utils.makeHeading(2, 'What\'s Causing Your Stress?');
 
-    const p1 = Utils.makeParagraph(
+    const joel1 = Utils.speakerBlock('joel',
         'A stressor is anything that triggers a stress response. ' +
         'Stressors can be external — like school, family conflict, or social pressure — ' +
         'or internal, like self-doubt, fear of failure, or unrealistic expectations you set for yourself.'
@@ -26,7 +26,7 @@ Engine.register('stress-02', () => {
         list.appendChild(li);
     });
 
-    const p2 = Utils.makeParagraph(
+    const michael1 = Utils.speakerBlock('michael',
         'Recognizing your stressors is the first step. ' +
         'You can\'t manage what you haven\'t named.'
     );
@@ -34,6 +34,6 @@ Engine.register('stress-02', () => {
     const nextBtn = createButton('Next →', 'stress-03', 'btn');
     const nav = createNav(true, true);
 
-    Utils.appendChildren(screen, tag, heading, p1, list, p2, nextBtn, nav);
+    Utils.appendChildren(screen, tag, heading, joel1, list, michael1, nextBtn, nav);
     return screen;
 });

@@ -7,12 +7,12 @@ Engine.register('isolation-02', () => {
     const tag = Utils.createElement('span', 'concept-tag', 'Suicide Ideation');
     const heading = Utils.makeHeading(2, 'When Things Feel Unbearable');
 
-    const p1 = Utils.makeParagraph(
+    const joel1 = Utils.speakerBlock('joel',
         'Sometimes when people are deeply isolated and in pain, they may start ' +
         'having thoughts of not wanting to be here anymore. This is called ' +
         'suicide ideation — and it\'s more common than most people know.'
     );
-    const p2 = Utils.makeParagraph(
+    const michael1 = Utils.speakerBlock('michael',
         'If you or someone you know is having these thoughts, please know: ' +
         'it doesn\'t mean they want to die. It usually means they want the ' +
         'pain to stop and don\'t know another way out. That other way exists.'
@@ -36,6 +36,6 @@ Engine.register('isolation-02', () => {
     const nextBtn = createButton('Next →', 'isolation-03', 'btn');
     const nav = createNav(true, true);
 
-    Utils.appendChildren(screen, tag, heading, p1, p2, warningBox, tipBox, nextBtn, nav);
+    Utils.appendChildren(screen, tag, heading, joel1, michael1, warningBox, tipBox, nextBtn, nav);
     return screen;
 });

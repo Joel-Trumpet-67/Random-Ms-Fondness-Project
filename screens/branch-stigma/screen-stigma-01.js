@@ -8,13 +8,13 @@ Engine.register('stigma-01', () => {
     const tag2 = Utils.createElement('span', 'concept-tag', 'Avoidance');
     const heading = Utils.makeHeading(2, 'The Shame Around Mental Health');
 
-    const p1 = Utils.makeParagraph(
+    const joel1 = Utils.speakerBlock('joel',
         'Stigma is the negative judgment, shame, or discrimination that surrounds ' +
         'mental health struggles. It\'s what makes people say "just get over it" ' +
         'or "you\'re being dramatic." It\'s what makes people afraid to ask for help ' +
         'because they don\'t want to seem weak.'
     );
-    const p2 = Utils.makeParagraph(
+    const michael1 = Utils.speakerBlock('michael',
         'Stigma causes people to avoid talking about mental health, avoid seeking ' +
         'treatment, and suffer in silence. That avoidance is dangerous — ' +
         'because problems that aren\'t addressed don\'t disappear. They grow.'
@@ -31,6 +31,6 @@ Engine.register('stigma-01', () => {
     const nextBtn = createButton('Next →', 'stigma-02', 'btn');
     const nav = createNav(true, true);
 
-    Utils.appendChildren(screen, tag1, tag2, heading, p1, p2, warningBox, nextBtn, nav);
+    Utils.appendChildren(screen, tag1, tag2, heading, joel1, michael1, warningBox, nextBtn, nav);
     return screen;
 });

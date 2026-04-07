@@ -8,14 +8,14 @@ Engine.register('coping-02', () => {
     const heading = Utils.makeHeading(2, 'More Tools For Your Toolkit');
 
     const h3c = Utils.makeHeading(3, '3. Journaling');
-    const pc = Utils.makeParagraph(
+    const joel1 = Utils.speakerBlock('joel',
         'Writing out your thoughts helps you process them. It turns a swirling mess ' +
         'in your head into something concrete you can look at. You don\'t need to write well — ' +
         'just write honestly. Even a few sentences a day makes a difference.'
     );
 
     const h3d = Utils.makeHeading(3, '4. Talking to Someone You Trust');
-    const pd = Utils.makeParagraph(
+    const michael1 = Utils.speakerBlock('michael',
         'Sharing what you\'re going through cuts its weight in half. ' +
         'It doesn\'t have to be a therapist — a friend, parent, coach, or anyone ' +
         'who listens without judgment. Saying it out loud makes it more manageable.'
@@ -32,6 +32,6 @@ Engine.register('coping-02', () => {
     const nextBtn = createButton('Next →', 'coping-03', 'btn');
     const nav = createNav(true, true);
 
-    Utils.appendChildren(screen, tag, heading, h3c, pc, h3d, pd, tipBox, nextBtn, nav);
+    Utils.appendChildren(screen, tag, heading, h3c, joel1, h3d, michael1, tipBox, nextBtn, nav);
     return screen;
 });

@@ -8,14 +8,14 @@ Engine.register('coping-03', () => {
     const heading = Utils.makeHeading(2, 'One More — And It\'s a Big One');
 
     const h3e = Utils.makeHeading(3, '5. Mindfulness');
-    const pe = Utils.makeParagraph(
+    const joel1 = Utils.speakerBlock('joel',
         'Mindfulness means focusing on the present moment instead of worrying ' +
         'about the past or future. It can be as simple as noticing five things ' +
         'you can see, four you can touch, three you can hear. ' +
         'It pulls your brain out of the anxiety spiral and back to right now.'
     );
 
-    const p2 = Utils.makeParagraph('Where would you like to go next?');
+    const michael1 = Utils.speakerBlock('michael', 'Where would you like to go next?');
 
     const grid = Utils.createElement('div', 'choice-grid');
 
@@ -43,6 +43,6 @@ Engine.register('coping-03', () => {
 
     const nav = createNav(true, false);
 
-    Utils.appendChildren(screen, tag, heading, h3e, pe, p2, grid, nav);
+    Utils.appendChildren(screen, tag, heading, h3e, joel1, michael1, grid, nav);
     return screen;
 });

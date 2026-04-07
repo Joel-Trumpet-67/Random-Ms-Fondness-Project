@@ -7,12 +7,12 @@ Engine.register('selfcare-02', () => {
     const tag = Utils.createElement('span', 'concept-tag', 'Resiliency');
     const heading = Utils.makeHeading(2, 'Bouncing Back');
 
-    const p1 = Utils.makeParagraph(
+    const joel1 = Utils.speakerBlock('joel',
         'Resiliency is your ability to recover from difficult experiences. ' +
         'It doesn\'t mean nothing hurts or that you never struggle — ' +
         'it means you have the tools and support to get back up when you get knocked down.'
     );
-    const p2 = Utils.makeParagraph(
+    const michael1 = Utils.speakerBlock('michael',
         'Resiliency is built over time through the small choices you make every day — ' +
         'asking for help when you need it, taking care of your body, maintaining ' +
         'connections with people you trust, and believing that hard times are temporary.'
@@ -25,7 +25,7 @@ Engine.register('selfcare-02', () => {
     );
     tipBox.appendChild(tipText);
 
-    const p3 = Utils.makeParagraph('Where would you like to go next?');
+    const joel2 = Utils.speakerBlock('joel', 'Where would you like to go next?');
 
     const grid = Utils.createElement('div', 'choice-grid');
 
@@ -48,6 +48,6 @@ Engine.register('selfcare-02', () => {
 
     const nav = createNav(true, false);
 
-    Utils.appendChildren(screen, tag, heading, p1, p2, tipBox, p3, grid, nav);
+    Utils.appendChildren(screen, tag, heading, joel1, michael1, tipBox, joel2, grid, nav);
     return screen;
 });

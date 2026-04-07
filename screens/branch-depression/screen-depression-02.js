@@ -8,12 +8,12 @@ Engine.register('depression-02', () => {
     const tag2 = Utils.createElement('span', 'concept-tag', 'Genetics');
     const heading = Utils.makeHeading(2, 'Recognizing It In Someone You Care About');
 
-    const p1 = Utils.makeParagraph(
+    const joel1 = Utils.speakerBlock('joel',
         'Sometimes the people we love are struggling and don\'t say anything. ' +
         'They might pull away, seem quieter than usual, stop doing things they ' +
         'used to enjoy, or brush off your concern with "I\'m fine."'
     );
-    const p2 = Utils.makeParagraph(
+    const michael1 = Utils.speakerBlock('michael',
         'It\'s also worth knowing that genetics play a role in depression. ' +
         'If someone in your family has struggled with mental health, you may be ' +
         'more likely to experience it too — but that doesn\'t mean it\'s inevitable, ' +
@@ -31,6 +31,6 @@ Engine.register('depression-02', () => {
     const nextBtn = createButton('Next →', 'depression-03', 'btn');
     const nav = createNav(true, true);
 
-    Utils.appendChildren(screen, tag1, tag2, heading, p1, p2, tipBox, nextBtn, nav);
+    Utils.appendChildren(screen, tag1, tag2, heading, joel1, michael1, tipBox, nextBtn, nav);
     return screen;
 });

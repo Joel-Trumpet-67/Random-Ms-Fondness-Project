@@ -6,12 +6,12 @@ Engine.register('stress-03', () => {
 
     const heading = Utils.makeHeading(2, 'You\'re Not Alone In This');
 
-    const p1 = Utils.makeParagraph(
+    const joel1 = Utils.speakerBlock('joel',
         'Stress is something everyone deals with — but not everyone knows ' +
         'how to handle it in a healthy way. Avoiding it, ignoring it, or ' +
         'letting it pile up only makes it worse over time.'
     );
-    const p2 = Utils.makeParagraph(
+    const michael1 = Utils.speakerBlock('michael',
         'Where would you like to go next?'
     );
 
@@ -41,6 +41,6 @@ Engine.register('stress-03', () => {
 
     const nav = createNav(true, false);
 
-    Utils.appendChildren(screen, heading, p1, p2, grid, nav);
+    Utils.appendChildren(screen, heading, joel1, michael1, grid, nav);
     return screen;
 });

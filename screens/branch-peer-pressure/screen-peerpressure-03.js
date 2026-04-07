@@ -6,12 +6,12 @@ Engine.register('peerpressure-03', () => {
 
     const heading = Utils.makeHeading(2, 'You Get To Choose Who You Are');
 
-    const p1 = Utils.makeParagraph(
+    const joel1 = Utils.speakerBlock('joel',
         'The people around you will shape you — but they don\'t define you. ' +
         'Surrounding yourself with people who respect your boundaries and support ' +
         'your wellbeing is one of the most powerful things you can do for your mental health.'
     );
-    const p2 = Utils.makeParagraph('Where would you like to go next?');
+    const michael1 = Utils.speakerBlock('michael', 'Where would you like to go next?');
 
     const grid = Utils.createElement('div', 'choice-grid');
 
@@ -39,6 +39,6 @@ Engine.register('peerpressure-03', () => {
 
     const nav = createNav(true, false);
 
-    Utils.appendChildren(screen, heading, p1, p2, grid, nav);
+    Utils.appendChildren(screen, heading, joel1, michael1, grid, nav);
     return screen;
 });
