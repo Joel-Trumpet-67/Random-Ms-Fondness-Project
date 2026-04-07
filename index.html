@@ -9,9 +9,31 @@
     <link rel="stylesheet" href="css/buttons.css">
     <link rel="stylesheet" href="css/screens.css">
     <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/podcast.css">
+    <link rel="stylesheet" href="css/sprites.css">
 </head>
 <body>
     <div id="app">
+        <div id="podcast-header">
+            <div class="podcast-header__left">
+                <span class="podcast-rec">
+                    <span class="podcast-rec__dot"></span>
+                    REC
+                </span>
+                <div class="podcast-waveform">
+                    <span></span><span></span><span></span>
+                    <span></span><span></span><span></span>
+                    <span></span><span></span>
+                </div>
+            </div>
+            <div class="podcast-header__center">
+                <span class="podcast-mic">🎙️</span>
+                <span class="podcast-title">Mental Wellness with Joel & Michael</span>
+            </div>
+            <div class="podcast-header__right">
+                <span class="podcast-ep" id="podcast-ep-label">Intro</span>
+            </div>
+        </div>
         <div id="progress-container"></div>
         <div id="screen-container"></div>
     </div>
@@ -21,6 +43,7 @@
     <script src="components/choice-card.js"></script>
     <script src="components/progress-bar.js"></script>
     <script src="components/nav.js"></script>
+    <script src="components/sprites.js"></script>
 
     <!-- Core JS (order matters) -->
     <script src="js/utils.js"></script>

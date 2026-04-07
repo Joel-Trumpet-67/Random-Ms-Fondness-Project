@@ -4,6 +4,7 @@
 Engine.register('intro', () => {
     const screen = Utils.createElement('div', 'screen screen--centered screen--intro');
 
+    const spritePair = Sprites.both('happy', 'neutral');
     const heading = Utils.makeHeading(2, 'Hi, it\'s us — Joel & Michael.');
     const quote = Utils.createElement('p', 'quote',
         '"Please take a few minutes to listen to what we have to say..."'
@@ -13,14 +14,14 @@ Engine.register('intro', () => {
         'these are things we all experience at some point in our lives.'
     );
     const p2 = Utils.makeParagraph(
-        'This guide is for someone close to us — maybe a friend, a sibling, a parent — ' +
-        'who might be struggling right now and needs a little help finding their way through.'
+        'This guide covers mental wellness topics that matter — and gives you real ' +
+        'strategies, information, and resources to understand and improve mental health.'
     );
     const p3 = Utils.makeParagraph(
-        'Choose what feels closest to what you or someone you care about is going through.'
+        'Pick any topic from the menu to get started.'
     );
     const nextBtn = createButton('Let\'s Go →', 'hub', 'btn');
 
-    Utils.appendChildren(screen, heading, quote, p1, p2, p3, nextBtn);
+    Utils.appendChildren(screen, spritePair, heading, quote, p1, p2, p3, nextBtn);
     return screen;
 });

@@ -8,8 +8,9 @@ Engine.register('title', () => {
     const subtitle = Utils.createElement('p', 'subtitle',
         'A mental wellness guide from Joel & Michael'
     );
-    const startBtn = createButton('Start', 'intro', 'btn btn--pulse');
+    const spritePair = Sprites.both('happy', 'happy');
+    const startBtn = createButton('🎙️ Start Listening', 'intro', 'btn btn--pulse');
 
-    Utils.appendChildren(screen, title, subtitle, startBtn);
+    Utils.appendChildren(screen, title, subtitle, spritePair, startBtn);
     return screen;
 });
